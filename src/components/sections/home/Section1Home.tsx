@@ -17,7 +17,7 @@ export function Section1Home() {
         <source src="/videos/hero.webm" type="video/webm" />
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
-
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/images/hero-bg.jpg"
         alt=""
@@ -32,15 +32,20 @@ export function Section1Home() {
 
       {/* Konten */}
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 pb-10 md:flex-row md:items-end md:justify-between">
-        <h1 className="text-[clamp(4rem,8vw,8rem)] font-normal uppercase leading-[0.85] tracking-tighter">
-          {profile.shortName}
+        <h1 className="overflow-hidden text-[clamp(4rem,8vw,8rem)] font-semibold uppercase leading-[0.85] tracking-tighter">
+          <span className="block animate-reveal motion-reduce:animate-none">
+            {profile.shortName}
+
+          </span>
         </h1>
 
-        <p className="max-w-sm text-lg leading-relaxed text-white/90">
+        <p className="animate-fade-up max-w-sm text-lg leading-relaxed text-white/90 [animation-delay:300ms] motion-reduce:animate-none">
           {profile.summary}
         </p>
 
-        <p className="text-2xl">© 2026</p>
+        <p className="text-2xl animate-fade-up [animation-delay:450ms] motion-reduce:animate-none">
+          © 2026
+        </p>
       </div>
     </section>
   );

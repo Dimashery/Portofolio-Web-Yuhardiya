@@ -4,9 +4,10 @@ export const profile: Profile = {
     name: "Haidar Dimas Heryanto",
     shortName: "Yuhardiya",
     role: "Software Engineer",
+    tagline: "Membangun Website yang cepat, rapi, dan mudah digunakan.",
     summary: "Passionate about creating innovative solutions and building scalable applications.",
     about: "I am a dedicated software engineer with experience in various programming languages and frameworks. I enjoy solving complex problems and continuously learning new technologies.",
-    email: "haidardimas@gmail.com",
+    email: "haidardimas003@gmail.com",
     socials: [
         {
             label: "GitHub",
