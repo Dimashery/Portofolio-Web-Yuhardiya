@@ -12,6 +12,23 @@ export type SkillGroup = {
     items: string[];
 }
 
+export type InfoGroup = {
+    label: string;
+    items: string[];
+}
+
+export type Stat = {
+    value: string;
+    description: string;
+}
+
+export type HomeIntro = {
+    label: string;
+    statement: string;
+    infoGroups: InfoGroup[];
+    stats: Stat;
+}
+
 export type SocialLink = {
     label: string;
     url: string;
@@ -26,6 +43,7 @@ export type Profile = {
     name: string;
     shortName: string;
     role: string;
+    tagline: string;
     summary: string;
     about: string;
     email: string;

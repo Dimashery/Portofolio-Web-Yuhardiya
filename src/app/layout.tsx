@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { profile } from "@/data/profile";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nama Anda | Frontend Developer",
-    template: "%s | Nama Anda",
+    default: `${profile.name} | ${profile.role}`,
+    template: `%s | ${profile.name}`,
   },
-  description: "Portofolio Nama Anda, Frontend Developer.",
+  description: `Portofolio ${profile.name}, ${profile.role}.`,
 };
 
 export default function RootLayout({
@@ -27,10 +28,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id">
-      {/* className body bawaan tetap dipertahankan */}
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans bg-white text-black dark:bg-black dark:text-white`}>
+      <body
+        id="top"
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-svh flex-col antialiased`}
+      >
         <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
