@@ -2,7 +2,8 @@ export type Project = {
     id: string;
     title: string;
     description: string;
-    techstack: string[];
+    image: string;
+    techStack: string[];
     repoUrl?: string; // tanda ? = boleh tidak diisi
     liveUrl?: string;
 }
@@ -49,3 +50,12 @@ export type Profile = {
     email: string;
     socials: SocialLink[];
 }
+
+export type ProjectsHero = {
+    intro: string;
+    services: string[];
+    title: string;
+    aboutLabel: string;
+    statement: string;
+}
+
