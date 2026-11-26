@@ -10,13 +10,52 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-anton);
+  --font-script: var(--font-dancing);
 }
 
 @theme {
   --animate-reveal: reveal 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-marquee: marquee 40s linear infinite;
+  --animate-slide-from-right: slide-from-right 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-slide-from-left: slide-from-left 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-slide-up: slide-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  @keyframes slide-from-right {
+    from {
+      opacity: 0;
+      transform: translateX(var(--slide-x, 120px));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-from-left {
+    from {
+      opacity: 0;
+      transform: translateX(calc(var(--slide-x, 120px) * -1));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
   @keyframes marquee {
     from{
       transform: translateX(0);

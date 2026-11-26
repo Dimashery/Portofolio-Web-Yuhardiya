@@ -59,3 +59,52 @@ export type ProjectsHero = {
     statement: string;
 }
 
+export type AboutMeStat = {
+  value: string;
+  label: string;
+};
+
+export type AboutMeHero = {
+  topLabel: string;
+  availability: string;
+  bigTitle: string;
+  greeting: string;
+  description: string;
+  location: string;
+  tagline: string;
+  stats: AboutMeStat[];
+};
+
+export type EducationItem = {
+  period: string;
+  school: string;
+  major: string;
+};
+
+export type ExperienceItem = {
+  period: string;
+  place: string;
+  description: string;
+};
+
+export type LanguageSkill = {
+  name: string;
+  level: number; // 0 sampai 100
+};
+
+export type AboutMeDetail = {
+  about: string;
+  education: EducationItem[];
+  experience: ExperienceItem[];
+  languages: LanguageSkill[];
+};
+
+export type Certificate = {
+  id: string;
+  title: string;
+  issuer: string;
+  year: string;
+  description: string;
+  thumbnail: string; // gambar preview, contoh: "/images/certificates/itcb.jpg"
+  pdf: string; // file PDF, contoh: "/pdf/nama-file.pdf"
+};

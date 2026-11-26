@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { profile } from "@/data/profile";
+import { Geist, Geist_Mono, Anton, Dancing_Script } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +13,17 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const anton = Anton({
+  variable: "--font-anton",
+  subsets: ['latin'],
+  weight: "400"
+});
+
+const dancing = Dancing_Script({
+  variable: "--font-dancing",
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +41,7 @@ export default function RootLayout({
     <html lang="id">
       <body
         id="top"
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-svh flex-col antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${dancing.variable} flex min-h-svh flex-col antialiased`}
       >
         <Header />
         <main className="flex-1">{children}</main>
