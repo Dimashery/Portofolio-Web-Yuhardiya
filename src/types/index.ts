@@ -108,3 +108,17 @@ export type Certificate = {
   thumbnail: string; // gambar preview, contoh: "/images/certificates/itcb.jpg"
   pdf: string; // file PDF, contoh: "/pdf/nama-file.pdf"
 };
+
+export type Contact = {
+  phoneNumber: string;
+  address: string[];
+  officeHours: {
+    days: string;
+    time: string;
+  };
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
